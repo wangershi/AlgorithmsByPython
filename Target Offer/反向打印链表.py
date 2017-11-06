@@ -2,9 +2,9 @@
 输入一个链表，从尾到头打印链表每个节点的值。
 '''
 class ListNode:
-    def __init__(self, x=None):
+    def __init__(self, x=None, next=next):
         self.val = x
-        self.next = None
+        self.next = Next
 
 class Solution:
     def printListFromTailToHead(self, listNode):
@@ -17,11 +17,9 @@ class Solution:
             head = head.next
         return l
 
-node1 = ListNode(10)
-node2 = ListNode(11)
 node3 = ListNode(13)
-node1.next = node2
-node2.next = node3
+node2 = ListNode(11, node3)
+node1 = ListNode(10, node2)
 
 singleNode = ListNode(12)
 
